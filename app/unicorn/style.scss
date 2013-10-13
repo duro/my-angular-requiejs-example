@@ -1,0 +1,13 @@
+/* --------------------------------------- */
+/* --( Unicorn List Table )-- */
+/* --------------------------------------- */
+
+.uniGrid {
+  width: 100%;
+
+  .colHead {
+    .headerCellSortable span {
+      color: $link-color;
+    }
+  }
+}

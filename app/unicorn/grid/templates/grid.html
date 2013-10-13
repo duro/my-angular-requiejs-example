@@ -1,0 +1,22 @@
+<table class="uniGrid table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th ng-repeat="col in cols" ng-class="col.indexClass()" class="colHead">
+        <div ng-class="{headerCellSortable: col.sortable}"
+              ng-style="{'cursor': col.cursor}" class="headerCell"
+              ng-click="col.sort($event)">
+          <span class="headerDisplayName">{{col.displayName}}</span>
+          <i class="icon-caret-up" ng-show="col.isSortTarget && col.sortDirection == 'ASC'"></i>
+          <i class="icon-caret-down" ng-show="col.isSortTarget && col.sortDirection == 'DESC'"></i>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in rows | orderBy:sortValue" class="uniRow">
+      <td ng-repeat="col in cols" ng-class="[col.colClass, col.indexClass()]" class="uniCell">
+        <span uni-cell></span>
+      </td>
+    </tr>
+  </tbody>
+</table>

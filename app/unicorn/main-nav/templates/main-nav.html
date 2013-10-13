@@ -1,0 +1,7 @@
+<li ng-repeat="navItem in navConfig"
+    ng-class="{ active: $state.includes(navItem.state) }">
+  <a ng-href="#{{navItem.route}}">
+    <i class="icon-{{navItem.icon}}"></i>
+    <span>{{navItem.name}}</span>
+  </a>
+</li>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ng-controller="AppCtrl">
+<head>
+  <title ng-bind="pageTitle + ' | NodeGigs'"></title>
+  <meta blah></meta>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+  <div id="header">
+    <h1><a href="./dashboard.html">Unicorn Admin</a></h1>
+    <a id="menu-trigger" href="#"><i class="icon-align-justify"></i></a>
+  </div>
+
+  <div id="search">
+    <input type="text" placeholder="Search here..."/><button type="submit" class="tip-right" title="Search"><i class="icon-search"></i></button>
+  </div>
+  <div id="user-nav">
+    <ul class="btn-group">
+      <li class="btn" ><a title="" href="#"><i class="icon-user"></i> <span class="text">Profile</span></a></li>
+      <li class="btn dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon-envelope"></i> <span class="text">Messages</span> <span class="label label-danger">5</span> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a class="sAdd" title="" href="#">new message</a></li>
+          <li><a class="sInbox" title="" href="#">inbox</a></li>
+          <li><a class="sOutbox" title="" href="#">outbox</a></li>
+          <li><a class="sTrash" title="" href="#">trash</a></li>
+        </ul>
+      </li>
+      <li class="btn"><a title="" href="#"><i class="icon-cog"></i> <span class="text">Settings</span></a></li>
+      <li class="btn"><a title="" href="login.html"><i class="icon-share-alt"></i> <span class="text">Logout</span></a></li>
+    </ul>
+  </div>
+
+  <div id="sidebar">
+    <ul id="main-nav" main-nav></ul>
+  </div>
+
+  <div id="content" ui-view>
+
+  </div>
+
+  <div class="row">
+    <div id="footer" class="col-xs-12">
+      2012 - 2013 &copy; Unicorn Admin. Brought to you by <a href="https://wrapbootstrap.com/user/diablo9983">diablo9983</a>
+    </div>
+  </div>
+
+<!-- build:js:release source.min.js -->
+<script src="vendor/requirejs/require.js" data-main="app/main"></script>
+<!-- /build -->
+
+<!-- build:remove:release -->
+<script src="http://localhost:35729/livereload.js"></script>
+<!-- /build -->
+
+</body>
+</html>

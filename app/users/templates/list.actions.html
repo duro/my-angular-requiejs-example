@@ -1,0 +1,20 @@
+<div class="btn-group">
+  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+    <i class="icon-cogs"></i> Actions
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu pull-right">
+    <li class="action-item">
+      <a ng-href="/users/edit/{{row._id}}">
+        <i class="icon-edit"></i>
+        Edit
+      </a>
+    </li>
+    <li class="action-item">
+      <a ng-href="/users/delete/{{row._id}}">
+        <i class="icon-trash"></i>
+        Delete
+      </a>
+    </li>
+  </ul>
+</div>
